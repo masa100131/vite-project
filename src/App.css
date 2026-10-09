@@ -1,3 +1,30 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+
+  a {
+    color: var(--text-h);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 16px 20px;
+  }
+}
+
+.site-header-brand {
+  font-weight: 700;
+}
+
 .counter {
   font-size: 16px;
   padding: 5px 10px;
