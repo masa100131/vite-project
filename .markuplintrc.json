@@ -1,0 +1,7 @@
+{
+  "extends": ["markuplint:recommended"],
+  "rules": {
+    "a11y/required-h1": false,
+    "performance/head-element-order": false
+  }
+}

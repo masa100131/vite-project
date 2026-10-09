@@ -8,8 +8,9 @@
     "build": "tsc -b && vite build",
     "lint:js": "oxlint .",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
+    "lint:html": "markuplint \"index.html\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\"",
-    "lint": "npm run lint:js && npm run lint:css && npm run lint:md",
+    "lint": "npm run lint:js && npm run lint:css && npm run lint:html && npm run lint:md",
     "format": "prettier --write .",
     "preview": "vite preview"
   },
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
+    "@markuplint/html-spec": "^5.1.0",
     "@rolldown/plugin-babel": "^0.2.3",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.13.3",
@@ -28,6 +30,7 @@
     "autoprefixer": "^10.6.1",
     "babel-plugin-react-compiler": "^1.0.0",
     "markdownlint-cli2": "^0.23.3",
+    "markuplint": "^5.1.0",
     "oxlint": "^1.81.0",
     "postcss": "^8.5.28",
     "prettier": "^3.9.9",
