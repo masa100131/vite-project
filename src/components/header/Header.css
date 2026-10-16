@@ -1,0 +1,113 @@
+.xeory-header {
+  position: relative;
+  z-index: 10;
+  background: #47b39d;
+  color: #fff;
+}
+
+.xeory-header-inner {
+  width: min(1200px, calc(100% - 48px));
+  height: 92px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.xeory-header-logo {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.xeory-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.xeory-header-nav {
+  margin-left: auto;
+}
+
+.xeory-header-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.xeory-header-item a {
+  display: block;
+  padding: 32px 12px;
+  line-height: 28px;
+  background: #47b39d;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.xeory-header-item a:hover,
+.xeory-header-item a:focus-visible {
+  background: #57bca8;
+}
+
+.xeory-header-menu-button {
+  display: none;
+  width: 116px;
+  height: 92px;
+  padding: 0;
+  border: 0;
+  color: #fff;
+  background: #3b4552;
+  font: inherit;
+  font-size: 28px;
+  line-height: 92px;
+  cursor: pointer;
+}
+
+.xeory-header-menu-button:focus-visible,
+.xeory-header a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -4px;
+}
+
+@media (max-width: 991px) {
+  .xeory-header-inner {
+    width: auto;
+    margin: 0 24px;
+  }
+
+  .xeory-header-nav {
+    position: absolute;
+    top: 92px;
+    right: 0;
+    left: 0;
+    display: none;
+    margin: 0;
+    background: #3b4552;
+  }
+
+  .xeory-header-nav.is-open {
+    display: block;
+  }
+
+  .xeory-header-list {
+    width: min(94%, 1200px);
+    margin: 0 auto;
+    padding: 24px 0;
+    flex-direction: column;
+  }
+
+  .xeory-header-item a {
+    padding: 10px 12px;
+    background: transparent;
+  }
+
+  .xeory-header-item a:hover,
+  .xeory-header-item a:focus-visible {
+    background: #4a5665;
+  }
+
+  .xeory-header-menu-button {
+    display: block;
+  }
+}
