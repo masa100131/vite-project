@@ -1,0 +1,38 @@
+.xeory-hero {
+  display: flex;
+  min-height: 500px;
+  padding: 40px 16px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #42a994;
+  color: #fff;
+  text-align: center;
+}
+
+.xeory-hero-title {
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.xeory-hero-text {
+  max-width: 600px;
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .xeory-hero-title {
+    font-size: 32px;
+  }
+
+  .xeory-hero-text {
+    font-size: 14px;
+  }
+}
