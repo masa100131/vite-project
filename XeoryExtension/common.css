@@ -179,7 +179,7 @@ textarea:focus-visible {
 /* Desktop styles (Override mobile styles for screens larger than 768px) */
 @media (min-width: 769px) {
     .site-header {
-        padding: 0 48px;
+        padding: 0 250px;
     }
 
     .site-header-logo {
