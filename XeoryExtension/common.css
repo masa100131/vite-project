@@ -849,6 +849,7 @@ textarea:focus-visible {
 
 .site-footer-bottom {
     background: #010a17;
+    text-align: center;
 }
 
 .site-footer-copyright {
