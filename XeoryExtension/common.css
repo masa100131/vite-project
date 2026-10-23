@@ -1,5 +1,5 @@
 body {
-    background-color: #ccc;
+    background-color: #f5f5f5;
     margin: 0;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
         "Hiragino Sans", Meiryo, sans-serif;
@@ -21,6 +21,47 @@ body {
     z-index: 100;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+a {
+    transition: all 0.3s ease-in-out;
+}
+
+.site-header a:hover,
+.site-footer a:hover {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(255, 108, 0, 0.45);
+    outline-offset: 2px;
+}
+
+.main {
+    overflow: hidden;
+}
+
+.page {
+    background-color: #fff;
+}
+
 .site-header-logo a {
     color: #fff;
     text-decoration: none;
@@ -34,7 +75,7 @@ body {
     cursor: pointer;
     position: relative;
     z-index: 100;
-    margin-right: 20px;
+    margin-right: 0;
     background-color: #333;
     width: 100px;
     height: 90px;
@@ -137,6 +178,15 @@ body {
 
 /* Desktop styles (Override mobile styles for screens larger than 768px) */
 @media (min-width: 769px) {
+    .site-header {
+        padding: 0 48px;
+    }
+
+    .site-header-logo {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .menu-trigger {
         display: none;
     }
@@ -153,7 +203,7 @@ body {
     .site-header-menu-list {
         flex-direction: row;
         gap: 16px;
-        padding: 0 16px;
+        padding: 0;
     }
 
     .site-header-menu-item {
@@ -269,8 +319,8 @@ body {
 }
 
 .posts {
-    margin: 40px 0;
-    padding: 0 0 60px 0;
+    margin: 0;
+    padding: 40px 0 60px;
     background: #fff;
     border-bottom: 1px solid #d6d6d6;
 }
@@ -301,7 +351,7 @@ body {
 
 .post-item {
     width: calc(20% - 16px);
-    min-width: 180px;
+    min-width: 0;
     box-sizing: border-box;
 }
 
@@ -321,6 +371,7 @@ body {
     width: 100%;
     aspect-ratio: 3 / 2;
     object-fit: cover;
+    display: block;
 }
 
 .post-item-rank,
@@ -401,7 +452,7 @@ body {
 
 .features {
     background: #fff;
-    margin: 40px 0 0;
+    margin: 0;
 }
 
 .feature {
@@ -440,6 +491,12 @@ body {
 .feature.feature-reverse .feature-body {
     margin-left: auto;
     margin-right: 8%;
+}
+
+.feature-num {
+    position: absolute;
+    top: 0;
+    left: 8%;
 }
 
 .feature-title {
@@ -533,6 +590,8 @@ body {
     }
 
     .feature-num {
+        position: relative;
+        left: auto;
         margin-bottom: 24px;
         padding: 24px 10px 8px;
         font-size: 24px;
@@ -560,5 +619,338 @@ body {
     .features .btn {
         width: 100%;
         min-width: 0;
+    }
+}
+
+.services {
+    background: #fff url("https://xeory.jp/extension/wp-content/themes/xeory_extension/lib/images/border_e5.png") repeat-y center top;
+    padding-bottom: 56px;
+}
+
+.services-list {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service {
+    width: 50%;
+    padding: 72px 8% 20px;
+    text-align: center;
+}
+
+.service + .service {
+    border-left: 1px solid #e5e5e5;
+}
+
+.service-title {
+    margin: 0 0 8px;
+    color: #47b39d;
+    font-size: 32px;
+    line-height: 1.4;
+}
+
+.service-subtitle {
+    margin: 0 0 32px;
+    color: #47b39d;
+    font-size: 13px;
+}
+
+.service .btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 14px 20px;
+    border-radius: 5px;
+    color: #fff;
+    background: #47b39d;
+    font-size: 14px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.service .btn:hover {
+    opacity: 0.8;
+}
+
+.company {
+    background: #fff;
+}
+
+.company-info {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 72px 0 96px;
+    overflow: hidden;
+}
+
+.company-label,
+.company-value {
+    margin: 0;
+    padding: 20px 32px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.company-label {
+    float: left;
+    width: 20%;
+    border-top: 2px solid #47b39d;
+}
+
+.company-value {
+    float: left;
+    width: 80%;
+}
+
+.contact {
+    background: #47b39d;
+    color: #fff;
+}
+
+.contact .content-header {
+    background: transparent;
+}
+
+.contact .content-header::after {
+    border-top-color: #47b39d;
+}
+
+.contact-form {
+    max-width: 632px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.contact-form-list {
+    margin: 0;
+}
+
+.contact-row {
+    margin: 0;
+}
+
+.contact-label {
+    display: block;
+    margin: 0 0 8px;
+    color: #fff;
+}
+
+.contact-input,
+.contact-textarea {
+    display: block;
+    width: 95%;
+    margin: 0 0 20px;
+    padding: 10px 13px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.contact-textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    display: block;
+    width: 30%;
+    min-width: 140px;
+    margin: 12px auto 0;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    background: #131d2a;
+}
+
+.btn-submit:hover {
+    background: #3b4552;
+}
+
+.site-footer {
+    padding: 56px 20px 24px;
+    color: #fff;
+    background: #3b4552;
+    text-align: center;
+}
+
+.site-footer-logo {
+    margin: 0 0 32px;
+    font-size: 24px;
+}
+
+.site-footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 24px;
+    max-width: 720px;
+    margin: 0 auto 48px;
+    font-size: 14px;
+}
+
+.site-footer-heading {
+    width: 100%;
+    margin: 20px 0 8px;
+    color: #aeb8c2;
+}
+
+.site-footer-heading:first-child {
+    margin-top: 0;
+}
+
+.site-footer-item {
+    margin: 0;
+}
+
+.site-footer-item a {
+    color: #fff;
+}
+
+.site-footer-copyright {
+    margin: 0;
+    color: #aeb8c2;
+    font-size: 12px;
+}
+
+@media (max-width: 991px) {
+    .posts-list {
+        max-width: 720px;
+    }
+
+    .feature-body {
+        width: 58%;
+    }
+
+    .company-info {
+        margin: 0 36px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-header {
+        height: 72px;
+    }
+
+    .site-header-logo {
+        padding: 16px 12px;
+    }
+
+    .menu-trigger {
+        width: 72px;
+        height: 72px;
+    }
+
+    .menu-trigger span:nth-child(1) {
+        top: 25px;
+    }
+
+    .menu-trigger span:nth-child(2) {
+        top: 35px;
+    }
+
+    .menu-trigger span:nth-child(3) {
+        top: 45px;
+    }
+
+    .site-header-nav {
+        top: 72px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: calc(100vh - 72px);
+        padding: 24vw 20px;
+    }
+
+    .posts {
+        padding-bottom: 36px;
+    }
+
+    .posts-title {
+        margin-bottom: 24px;
+        font-size: 20px;
+    }
+
+    .posts-list {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .post-item {
+        width: 100%;
+        margin-bottom: 28px;
+    }
+
+    .post-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .feature-body {
+        padding-top: 8px;
+    }
+
+    .services {
+        background-image: none;
+    }
+
+    .services-list {
+        display: block;
+    }
+
+    .service {
+        width: 100%;
+        padding: 56px 20px 20px;
+    }
+
+    .service + .service {
+        border-top: 1px solid #e5e5e5;
+        border-left: 0;
+    }
+
+    .service-title {
+        font-size: 28px;
+    }
+
+    .service .btn {
+        width: 100%;
+    }
+
+    .company-info {
+        margin: 0 20px;
+        padding: 56px 0 72px;
+    }
+
+    .company-label,
+    .company-value {
+        float: none;
+        width: 100%;
+        padding: 8px 12px;
+    }
+
+    .company-label {
+        border-top: 0;
+        font-weight: bold;
+    }
+
+    .company-value {
+        padding-top: 4px;
+        padding-bottom: 12px;
+    }
+
+    .contact-form {
+        padding-bottom: 36px;
+    }
+
+    .contact-input,
+    .contact-textarea {
+        width: 100%;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+
+    .site-footer {
+        padding-top: 40px;
     }
 }
