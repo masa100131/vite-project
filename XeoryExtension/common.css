@@ -489,6 +489,7 @@ textarea:focus-visible {
 }
 
 .feature.feature-reverse .feature-body {
+    width: 48%;
     margin-left: auto;
     margin-right: 8%;
 }
@@ -500,7 +501,7 @@ textarea:focus-visible {
 }
 
 .feature.feature-reverse .feature-num {
-    left: 40%;
+    left: 44%;
     right: auto;
 }
 
