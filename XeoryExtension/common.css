@@ -687,10 +687,11 @@ textarea:focus-visible {
 }
 
 .company-info {
-    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    max-width: 684px;
     margin: 0 auto;
     padding: 72px 0 96px;
-    overflow: hidden;
 }
 
 .company-label,
@@ -701,14 +702,11 @@ textarea:focus-visible {
 }
 
 .company-label {
-    float: left;
-    width: 20%;
     border-top: 2px solid #47b39d;
 }
 
 .company-value {
-    float: left;
-    width: 80%;
+    border-top: 1px solid #e5e5e5;
 }
 
 .contact {
@@ -925,14 +923,13 @@ textarea:focus-visible {
     }
 
     .company-info {
+        display: block;
         margin: 0 20px;
         padding: 56px 0 72px;
     }
 
     .company-label,
     .company-value {
-        float: none;
-        width: 100%;
         padding: 8px 12px;
     }
 
@@ -942,6 +939,7 @@ textarea:focus-visible {
     }
 
     .company-value {
+        border-top: 0;
         padding-top: 4px;
         padding-bottom: 12px;
     }
