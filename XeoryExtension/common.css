@@ -500,8 +500,8 @@ textarea:focus-visible {
 }
 
 .feature.feature-reverse .feature-num {
-    right: 8%;
-    left: auto;
+    left: 40%;
+    right: auto;
 }
 
 .feature-title {
