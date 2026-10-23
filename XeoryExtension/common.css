@@ -862,7 +862,7 @@ textarea:focus-visible {
 }
 
 .site-footer-bottom .site-footer-copyright {
-    margin: 0;
+    width: 100%;
 }
 
 @media (max-width: 991px) {
