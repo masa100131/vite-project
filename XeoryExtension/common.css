@@ -725,7 +725,7 @@ textarea:focus-visible {
 .contact-form {
     max-width: 632px;
     margin: 0 auto;
-    padding: 0 20px 60px;
+    padding: 48px 20px 60px;
 }
 
 .contact-form-list {
