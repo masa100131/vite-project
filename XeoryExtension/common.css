@@ -775,49 +775,93 @@ textarea:focus-visible {
 }
 
 .site-footer {
-    padding: 56px 20px 24px;
+    border-top: 8px solid #3b4552;
     color: #fff;
-    background: #3b4552;
-    text-align: center;
+    background: #031731;
+}
+
+.site-footer-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 36px;
 }
 
 .site-footer-logo {
     margin: 0 0 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #3b4552;
     font-size: 24px;
 }
 
-.site-footer-nav {
+.site-footer-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0 24px;
-    max-width: 720px;
-    margin: 0 auto 48px;
-    font-size: 14px;
+    gap: 72px;
+}
+
+.site-footer-section {
+    flex: 1;
 }
 
 .site-footer-heading {
-    width: 100%;
-    margin: 20px 0 8px;
-    color: #aeb8c2;
+    margin: 0 0 16px;
+    color: #fff;
+    font-size: 14px;
 }
 
-.site-footer-heading:first-child {
-    margin-top: 0;
+.site-footer-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .site-footer-item {
+    position: relative;
     margin: 0;
 }
 
-.site-footer-item a {
+.site-footer-item::before {
+    content: "›";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
     color: #fff;
 }
 
+.site-footer-item a {
+    display: inline-flex;
+    align-items: center;
+    gap: 26px;
+    padding: 8px 12px 8px 14px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.site-footer-item a:hover {
+    color: #ccc;
+}
+
+.site-footer-item .fa {
+    width: 16px;
+    margin-left: -2px;
+    text-align: center;
+}
+
+.site-footer-bottom {
+    background: #010a17;
+}
+
 .site-footer-copyright {
-    margin: 0;
-    color: #aeb8c2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 36px;
+    color: #fff;
     font-size: 12px;
+    text-align: center;
+}
+
+.site-footer-bottom .site-footer-copyright {
+    margin: 0;
 }
 
 @media (max-width: 991px) {
@@ -959,6 +1003,22 @@ textarea:focus-visible {
     }
 
     .site-footer {
-        padding-top: 40px;
+        border-top-width: 6px;
+    }
+
+    .site-footer-main {
+        padding: 40px 20px;
+    }
+
+    .site-footer-content {
+        display: block;
+    }
+
+    .site-footer-section + .site-footer-section {
+        margin-top: 24px;
+    }
+
+    .site-footer-bottom .site-footer-copyright {
+        padding: 24px 20px;
     }
 }
