@@ -55,7 +55,9 @@ export function Header({
           aria-label={isMenuOpen ? 'メニューを閉じる' : 'メニューを開く'}
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          ≡
+          <span />
+          <span />
+          <span />
         </button>
       </div>
     </header>

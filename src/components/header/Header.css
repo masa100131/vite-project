@@ -6,9 +6,7 @@
 }
 
 .xeory-header-inner {
-  width: min(1200px, calc(100% - 48px));
-  height: 92px;
-  margin: 0 auto;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,7 +14,8 @@
 
 .xeory-header-logo {
   margin: 0;
-  font-size: 24px;
+  padding: 16px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1;
 }
@@ -39,8 +38,8 @@
 
 .xeory-header-item a {
   display: block;
-  padding: 32px 12px;
-  line-height: 28px;
+  padding: 0 16px;
+  line-height: 90px;
   background: #47b39d;
   transition: background-color 0.3s ease-in-out;
 }
@@ -52,38 +51,90 @@
 
 .xeory-header-menu-button {
   display: none;
-  width: 116px;
-  height: 92px;
+  position: relative;
+  width: 100px;
+  height: 90px;
   padding: 0;
   border: 0;
   color: #fff;
   background: #3b4552;
-  font: inherit;
-  font-size: 28px;
-  line-height: 92px;
   cursor: pointer;
+}
+
+.xeory-header-menu-button span {
+  position: absolute;
+  left: 50%;
+  width: 40px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.xeory-header-menu-button span:nth-child(1) {
+  top: 34px;
+}
+
+.xeory-header-menu-button span:nth-child(2) {
+  top: 44px;
+}
+
+.xeory-header-menu-button span:nth-child(3) {
+  top: 54px;
+}
+
+.xeory-header-menu-button[aria-expanded='true'] span:nth-child(1) {
+  transform: translateX(-50%) translateY(10px) rotate(45deg);
+}
+
+.xeory-header-menu-button[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.xeory-header-menu-button[aria-expanded='true'] span:nth-child(3) {
+  transform: translateX(-50%) translateY(-10px) rotate(-45deg);
 }
 
 .xeory-header-menu-button:focus-visible,
 .xeory-header a:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: -4px;
+  outline: 3px solid rgba(255, 108, 0, 0.45);
+  outline-offset: 2px;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 769px) {
+  .xeory-header {
+    padding: 0 250px;
+  }
+
+  .xeory-header-logo {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .xeory-header-nav {
+    display: block;
+  }
+
+  .xeory-header-menu-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
   .xeory-header-inner {
-    width: auto;
-    margin: 0 24px;
+    height: 90px;
   }
 
   .xeory-header-nav {
     position: absolute;
-    top: 92px;
-    right: 0;
+    top: 90px;
     left: 0;
+    width: 100%;
     display: none;
-    margin: 0;
-    background: #3b4552;
+    padding: 16px 0;
+    background: rgba(50, 50, 50, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .xeory-header-nav.is-open {
@@ -91,20 +142,30 @@
   }
 
   .xeory-header-list {
-    width: min(94%, 1200px);
-    margin: 0 auto;
-    padding: 24px 0;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
     flex-direction: column;
   }
 
+  .xeory-header-item {
+    width: 100%;
+  }
+
   .xeory-header-item a {
-    padding: 10px 12px;
+    padding: 16px 24px;
     background: transparent;
+    line-height: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .xeory-header-item:last-child a {
+    border-bottom: 0;
   }
 
   .xeory-header-item a:hover,
   .xeory-header-item a:focus-visible {
-    background: #4a5665;
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .xeory-header-menu-button {
