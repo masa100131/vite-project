@@ -740,13 +740,14 @@ textarea:focus-visible {
     display: block;
     margin: 0 0 8px;
     color: #fff;
+    text-align: center;
 }
 
 .contact-input,
 .contact-textarea {
     display: block;
     width: 95%;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
     padding: 10px 13px;
     border: 1px solid #ccc;
     border-radius: 3px;
