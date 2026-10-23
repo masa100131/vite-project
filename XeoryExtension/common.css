@@ -715,11 +715,11 @@ textarea:focus-visible {
 }
 
 .contact .content-header {
-    background: transparent;
+    background-color: #3e4b5b;
 }
 
 .contact .content-header::after {
-    border-top-color: #47b39d;
+    border-top-color: #3e4b5b;
 }
 
 .contact-form {
