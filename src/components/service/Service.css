@@ -1,43 +1,3 @@
-.service-header {
-  position: relative;
-  padding: 60px 20px 50px;
-  background-color: #3e4b5b;
-  color: #fff;
-  text-align: center;
-}
-
-.service-header::after {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  border-color: #3e4b5b transparent transparent;
-  border-style: solid;
-  border-width: 20px 60px 0;
-  content: '';
-  transform: translateX(-50%);
-}
-
-.service-header-title {
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.service-header-title::before {
-  display: block;
-  margin-bottom: 12px;
-  content: '✔';
-  font-size: 28px;
-}
-
-.service-header-label {
-  margin: 0;
-  color: #a5b1c2;
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
 .service {
   width: 100%;
   box-sizing: border-box;
@@ -79,10 +39,6 @@
 }
 
 @media (max-width: 768px) {
-  .service-header {
-    padding: 48px 20px 40px;
-  }
-
   .service {
     padding: 48px 20px 20px;
   }

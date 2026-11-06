@@ -2,13 +2,8 @@ import './Inquiry.css'
 
 export function Inquiry() {
   return (
-    <section className="inquiry">
-      <header className="inquiry-header">
-        <h2 className="inquiry-header-title">お問い合わせ</h2>
-        <p className="inquiry-header-label">inquiry</p>
-      </header>
-      <form className="inquiry-form" action="#" method="post">
-        <dl className="inquiry-form-list">
+    <form className="inquiry-form" action="#" method="post">
+      <dl className="inquiry-form-list">
         <dt className="inquiry-row">
           <label className="inquiry-label" htmlFor="inquiry-name">
             お名前（必須）
@@ -69,9 +64,8 @@ export function Inquiry() {
             送信
           </button>
         </dd>
-        </dl>
-      </form>
-    </section>
+      </dl>
+    </form>
   )
 }
 

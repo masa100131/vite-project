@@ -1,57 +1,7 @@
-.inquiry {
-  background-color: #47b39d;
-}
-
-.inquiry-header {
-  position: relative;
-  padding: 60px 20px 50px;
-  background-color: #3e4b5b;
-  color: #fff;
-  text-align: center;
-}
-
-.inquiry-header::after {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  border-color: #3e4b5b transparent transparent;
-  border-style: solid;
-  border-width: 20px 60px 0;
-  content: '';
-  transform: translateX(-50%);
-}
-
-.inquiry-header-title {
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.inquiry-header-title::before {
-  display: block;
-  margin-bottom: 12px;
-  content: '✔';
-  font-size: 28px;
-}
-
-.inquiry-header-label {
-  margin: 0;
-  color: #a5b1c2;
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
 .inquiry-form {
   max-width: 632px;
   margin: 0 auto;
   padding: 48px 20px 60px;
-}
-
-@media (max-width: 768px) {
-  .inquiry-header {
-    padding: 48px 20px 40px;
-  }
 }
 
 .inquiry-form-list {
