@@ -14,13 +14,19 @@ export function Service({
   linkLabel,
 }: ServiceProps) {
   return (
-    <article className="service">
-      <h3 className="service-title">{title}</h3>
-      <p className="service-subtitle">{subtitle}</p>
-      <a className="service-link" href={href}>
-        {linkLabel}
-      </a>
-    </article>
+    <section className="services">
+      <header className="service-header">
+        <h2 className="service-header-title">サービス紹介</h2>
+        <p className="service-header-label">service</p>
+      </header>
+      <article className="service">
+        <h3 className="service-title">{title}</h3>
+        <p className="service-subtitle">{subtitle}</p>
+        <a className="service-link" href={href}>
+          {linkLabel}
+        </a>
+      </article>
+    </section>
   )
 }
 
