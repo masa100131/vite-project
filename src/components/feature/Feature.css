@@ -1,0 +1,151 @@
+.feature {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.feature.feature-reverse {
+  background-color: #fafafa;
+}
+
+.feature-num {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  display: inline-block;
+  margin: 0 0 32px;
+  padding: 40px 12px 8px;
+  background-color: #47b39d;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.feature-body {
+  position: relative;
+  z-index: 2;
+  width: 52%;
+  padding: 72px 0 56px;
+}
+
+.feature:not(.feature-reverse) .feature-body {
+  margin-left: 8%;
+}
+
+.feature.feature-reverse .feature-body {
+  width: 48%;
+  margin-right: 8%;
+  margin-left: auto;
+}
+
+.feature.feature-reverse .feature-num {
+  right: auto;
+  left: 44%;
+}
+
+.feature-title {
+  margin: 0;
+  color: #47b39d;
+  font-size: 36px;
+  line-height: 1.4;
+}
+
+.feature-subtitle {
+  margin: 0 0 32px;
+  color: #47b39d;
+  font-size: 13px;
+}
+
+.feature-text {
+  margin: 0 0 48px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.feature-action {
+  margin: 0;
+}
+
+.feature-button {
+  display: inline-block;
+  width: 30%;
+  min-width: 180px;
+  border-radius: 5px;
+  padding: 12px;
+  background-color: #ff6c00;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 3px rgb(0 0 0 / 50%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.feature-button:hover,
+.feature-button:focus-visible {
+  opacity: 0.85;
+}
+
+.feature::after {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: var(--feature-image);
+  content: '';
+}
+
+.feature:not(.feature-reverse)::after {
+  right: 0;
+}
+
+.feature.feature-reverse::after {
+  right: auto;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .feature,
+  .feature.feature-reverse {
+    min-height: auto;
+  }
+
+  .feature-num,
+  .feature.feature-reverse .feature-num {
+    position: relative;
+    right: auto;
+    left: auto;
+    margin-bottom: 24px;
+    padding: 24px 10px 8px;
+    font-size: 24px;
+  }
+
+  .feature-body,
+  .feature.feature-reverse .feature-body {
+    width: auto;
+    margin: 0;
+    padding: 28px 20px 36px;
+  }
+
+  .feature-title {
+    font-size: 28px;
+  }
+
+  .feature::after {
+    display: none;
+  }
+
+  .feature-button {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+}
