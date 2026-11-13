@@ -1,6 +1,7 @@
 import Header from './components/header/Header'
 import Hero from './components/hero/Hero'
 import PostItem from './components/post-item/PostItem'
+import PopularPostsTitle from './components/popular-posts/PopularPostsTitle'
 import './App.css'
 
 function App() {
@@ -10,9 +11,7 @@ function App() {
       <main>
         <Hero />
         <section className="posts" aria-labelledby="posts-title">
-          <h2 className="posts-title" id="posts-title">
-            人気のある記事
-          </h2>
+          <PopularPostsTitle />
           <div className="posts-list">
             <PostItem
               href="https://xeory.jp/extension/demo-top"
