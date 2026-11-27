@@ -3,6 +3,43 @@
   background: #fff;
 }
 
+.services {
+  padding-bottom: 56px;
+  background: #fff;
+}
+
+.services-list {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact {
+  background: #47b39d;
+  color: #fff;
+}
+
+.inquiry-form {
+  max-width: 632px;
+  margin: 0 auto;
+  padding: 48px 20px 60px;
+}
+
+.inquiry-form-list {
+  margin: 0;
+}
+
+.company {
+  background-color: #fff;
+}
+
+.company-info {
+  display: grid;
+  max-width: 684px;
+  margin: 0 auto;
+  padding: 72px 20px 96px;
+}
+
 .posts-list {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -20,6 +57,16 @@
 @media (max-width: 576px) {
   .posts-list {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-list {
+    display: block;
+  }
+
+  .company-info {
+    padding: 56px 20px 64px;
   }
 }
 

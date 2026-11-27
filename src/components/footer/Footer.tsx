@@ -1,10 +1,9 @@
 import './Footer.css'
+import { FooterCopyright } from './FooterCopyright'
+import { FooterLinkItem } from './FooterLinkItem'
+import type { FooterLinkItemProps } from './FooterLinkItem'
 
-export interface FooterLink {
-  label: string
-  href: string
-  icon?: string
-}
+export type FooterLink = FooterLinkItemProps
 
 export interface FooterProps {
   logo?: string
@@ -54,7 +53,7 @@ export function Footer({
         </div>
       </div>
       <div className="site-footer-bottom">
-        <p className="site-footer-copyright">{copyright}</p>
+        <FooterCopyright copyright={copyright} />
       </div>
     </footer>
   )
@@ -65,13 +64,8 @@ function FooterSection({ title, links }: { title: string; links: FooterLink[] })
     <section className="site-footer-section">
       <h2 className="site-footer-heading">{title}</h2>
       <ul className="site-footer-list">
-        {links.map(({ label, href, icon }) => (
-          <li className="site-footer-item" key={`${href}-${label}`}>
-            <a href={href}>
-              {icon && <span className="site-footer-icon" aria-hidden="true">{icon}</span>}
-              {label}
-            </a>
-          </li>
+        {links.map((link) => (
+          <FooterLinkItem key={`${link.href}-${link.label}`} {...link} />
         ))}
       </ul>
     </section>

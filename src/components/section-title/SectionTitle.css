@@ -1,4 +1,4 @@
-.inquiry-title-section {
+.section-title {
   position: relative;
   padding: 60px 20px 50px;
   background-color: #3e4b5b;
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.inquiry-title-section::after {
+.section-title::after {
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -17,21 +17,21 @@
   transform: translateX(-50%);
 }
 
-.inquiry-title-heading {
+.section-title-heading {
   margin: 0;
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-.inquiry-title-heading::before {
+.section-title-heading::before {
   display: block;
   margin-bottom: 12px;
   content: '✔';
   font-size: 28px;
 }
 
-.inquiry-title-label {
+.section-title-label {
   margin: 0;
   color: #a5b1c2;
   font-size: 11px;
@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 768px) {
-  .inquiry-title-section {
+  .section-title {
     padding: 48px 20px 40px;
   }
 }

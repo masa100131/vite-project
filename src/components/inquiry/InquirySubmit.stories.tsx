@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import { InquiryTitle } from './InquiryTitle'
+import { InquirySubmit } from './InquirySubmit'
 
 const meta = {
-  title: 'Components/InquiryTitle',
-  component: InquiryTitle,
+  title: 'Components/InquirySubmit',
+  component: InquirySubmit,
   parameters: {
-    layout: 'fullscreen',
+    layout: 'centered',
   },
-} satisfies Meta<typeof InquiryTitle>
+} satisfies Meta<typeof InquirySubmit>
 
 export default meta
 type Story = StoryObj<typeof meta>
