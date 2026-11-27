@@ -1,14 +1,3 @@
-.company {
-  background-color: #fff;
-}
-
-.company-info {
-  display: grid;
-  max-width: 684px;
-  margin: 0 auto;
-  padding: 72px 20px 96px;
-}
-
 .company-row {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -30,10 +19,6 @@
 }
 
 @media (max-width: 768px) {
-  .company-info {
-    padding: 56px 20px 64px;
-  }
-
   .company-row {
     grid-template-columns: 35% 65%;
   }

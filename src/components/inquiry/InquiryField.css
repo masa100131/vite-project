@@ -1,0 +1,26 @@
+.inquiry-row {
+  margin: 0;
+}
+
+.inquiry-label {
+  display: block;
+  margin: 0 0 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.inquiry-input,
+.inquiry-textarea {
+  display: block;
+  width: 95%;
+  box-sizing: border-box;
+  margin: 0 auto 20px;
+  padding: 10px 13px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.inquiry-textarea {
+  resize: vertical;
+}
