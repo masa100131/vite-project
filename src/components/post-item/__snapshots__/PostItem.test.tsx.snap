@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PostItem > 記事カードのHTMLをスナップショットと照合する 1`] = `
+<DocumentFragment>
+  <article
+    class="post-item"
+  >
+    <a
+      class="post-item-link"
+      href="/article"
+    >
+      <img
+        alt="記事のサンプル画像"
+        class="post-item-thumb"
+        src="/article.jpg"
+      />
+      <p
+        class="post-item-category"
+      >
+        カテゴリー#1
+      </p>
+      <h3
+        class="post-item-title"
+      >
+        テスト記事
+      </h3>
+      <p
+        class="post-item-rank"
+      >
+        NO.
+        <span>
+          1
+        </span>
+      </p>
+    </a>
+  </article>
+</DocumentFragment>
+`;
